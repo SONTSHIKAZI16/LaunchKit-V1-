@@ -1,1 +1,33 @@
-{"name":"launchkit-v1","private":true,"version":"0.1.0","type":"module","scripts":{"dev":"vite","build":"vite build","preview":"vite preview","deploy":"npm run build && wrangler deploy"},"dependencies":{"@vitejs/plugin-react":"latest","vite":"latest","react":"latest","react-dom":"latest","lucide-react":"latest","wrangler":"latest","@cloudflare/vite-plugin":"latest"},"devDependencies":{}}
+{
+  "name": "launchkit-v1",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@10.34.3",
+  "engines": {
+    "node": ">=20.9.0"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@supabase/ssr": "0.12.7",
+    "@supabase/supabase-js": "2.118.0",
+    "lucide-react": "1.61.0",
+    "next": "16.4.3",
+    "openai": "7.43.0",
+    "react": "19.3.1",
+    "react-dom": "19.3.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "4.3.3",
+    "@types/node": "26.6.5",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "tailwindcss": "4.3.3",
+    "typescript": "7.0.2"
+  }
+}

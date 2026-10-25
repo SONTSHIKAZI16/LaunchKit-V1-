@@ -1,13 +1,21 @@
-# Mthiya LaunchKit V1 — Build 031 Recovery Foundation
+# Mthiya LaunchKit V1 — Next.js Recovery Foundation
 
-This is a reconstructed deployable application layer based on the LaunchKit V1 architecture and documentation available after the original source was missing from the repository. It is not claimed to be the byte-for-byte original source.
+This branch restores a deployable Next.js App Router shell from the LaunchKit V1 build notes. It is not a byte-for-byte recovery of the missing original application source.
 
-## Run
-npm install
-npm run dev
+## Run locally
 
-## Build / Cloudflare
-npm run build
-npx wrangler deploy
+```sh
+pnpm install --frozen-lockfile
+pnpm dev
+```
 
-Cloudflare expects the built assets in `dist/` through `wrangler.jsonc`.
+## Verify a production build
+
+```sh
+pnpm typecheck
+pnpm build
+```
+
+Vercel should use the repository root as the project root. The root `package.json` declares Next.js and the build script runs `next build`. `/api/health` provides a lightweight deployment check.
+
+The historical feature notes remain in `README_BUILD_019.md` through `README_BUILD_030.md`.
